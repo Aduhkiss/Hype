@@ -6,11 +6,26 @@ import me.kbrewster.exceptions.APIException;
 import me.kbrewster.exceptions.InvalidPlayerException;
 import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.player.HypixelPlayer;
+import me.kbrewster.hypixelapi.player.stats.arcade.Arcade;
 import me.kbrewster.hypixelapi.player.stats.bedwars.Bedwars;
+import net.angusbeefgaming.hype.Plugin;
 import net.angusbeefgaming.hype.Util;
 
-public class BedwarsStats {
-	public BedwarsStats(HypixelAPI api, String name) {
+public class BedwarsStats extends Plugin {
+	public BedwarsStats(HypixelAPI api) {
+		super("Bedwars", api);
+	}
+	
+	@Override
+	public String getName() {
+		 return super.name;
+	}
+	
+	@Override
+	public void execute() {
+		Util.print(getName(), "Who would you like to lookup?");
+		
+		String name = Util.getInput();
 		HypixelPlayer player = null;
 		try {
 			player = api.getPlayer(name);
