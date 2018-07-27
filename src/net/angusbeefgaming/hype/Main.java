@@ -11,12 +11,24 @@ import net.angusbeefgaming.hype.plugins.NetworkStats;
 import net.angusbeefgaming.hype.plugins.TNTGamesStats;
 
 public class Main {
+	
+	public static final String VERSION = "v1.2";
+	public static final boolean BETA = false;
+	
 	public static List<Plugin> plugins = new ArrayList<Plugin>();
 	public static void main(String[] args) {
 		Util.print("Hype", "Welcome to Hype Stats by Atticus Zambrana");
-		Util.print("Hype", "You are running Hype v1.1");
+		if(BETA) {
+			Util.print("Hype", "You are running " + VERSION + " BETA!");
+		}
+		else {
+			Util.print("Hype", "You are running " + VERSION + "!");
+		}
+		Util.print("Hype", "Please Enter your Hypixel API Key...");
+		String KEY = Util.getInput();
+		
 		Util.print("Hype", "Registering Hypixel API...");
-		HypixelAPI api = new HypixelAPI("API_KEY_HERE");
+		HypixelAPI api = new HypixelAPI(KEY);
 		Util.print("Plugin Manager", "Registering Plugins...");
 		// Plugin Manager
 		
