@@ -6,6 +6,7 @@ import java.util.List;
 import me.kbrewster.hypixelapi.HypixelAPI;
 import net.angusbeefgaming.hype.plugins.ArcadeStats;
 import net.angusbeefgaming.hype.plugins.BedwarsStats;
+import net.angusbeefgaming.hype.plugins.GuildStats;
 import net.angusbeefgaming.hype.plugins.NetworkStats;
 import net.angusbeefgaming.hype.plugins.TNTGamesStats;
 
@@ -23,6 +24,7 @@ public class Main {
 		plugins.add(new BedwarsStats(api));
 		plugins.add(new NetworkStats(api));
 		plugins.add(new TNTGamesStats(api));
+		plugins.add(new GuildStats(api));
 		
 		start(api);
 	}

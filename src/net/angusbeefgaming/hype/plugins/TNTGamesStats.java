@@ -14,12 +14,7 @@ public class TNTGamesStats extends Plugin {
 	public TNTGamesStats(HypixelAPI api) {
 		super("TNTGames", api);
 	}
-	
-	@Override
-	public String getName() {
-		 return super.name;
-	}
-	
+
 	@Override
 	public void execute() {
 		Util.print(getName(), "Who would you like to lookup?");

@@ -2,7 +2,7 @@ package net.angusbeefgaming.hype;
 
 import me.kbrewster.hypixelapi.HypixelAPI;
 
-public class Plugin {
+public abstract class Plugin {
 	/*
 	 * Base Class for all 1.1+ Plugins for Hype
 	 * Created by Atticus Zambrana
@@ -17,7 +17,5 @@ public class Plugin {
 	public String getName() {
 		return name;
 	}
-	public void execute() {
-		
-	}
+	public abstract void execute();
 }

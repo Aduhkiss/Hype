@@ -17,11 +17,6 @@ public class BedwarsStats extends Plugin {
 	}
 	
 	@Override
-	public String getName() {
-		 return super.name;
-	}
-	
-	@Override
 	public void execute() {
 		Util.print(getName(), "Who would you like to lookup?");
 		
