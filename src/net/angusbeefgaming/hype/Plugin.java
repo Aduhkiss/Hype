@@ -3,19 +3,29 @@ package net.angusbeefgaming.hype;
 import me.kbrewster.hypixelapi.HypixelAPI;
 
 public abstract class Plugin {
+	
 	/*
-	 * Base Class for all 1.1+ Plugins for Hype
+	 * Base Plugin Class
+	 * 
 	 * Created by Atticus Zambrana
+	 * 
+	 * Current Version: 1.2
 	 */
 	
 	public String name;
 	public HypixelAPI api;
-	public Plugin(String name, HypixelAPI api) {
+	public String author;
+	public Plugin(String name, String author, HypixelAPI api) {
 		this.name = name;
 		this.api = api;
+		this.author = author;
+		Util.print("Plugin Manager", "Registered " + name + " by " + author);
 	}
 	public String getName() {
 		return name;
+	}
+	public String getAuthor() {
+		return author;
 	}
 	public abstract void execute();
 }

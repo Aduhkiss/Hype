@@ -11,7 +11,7 @@ import net.angusbeefgaming.hype.Util;
 
 public class NetworkStats extends Plugin {
 	public NetworkStats(HypixelAPI api) {
-		super("Network", api);
+		super("Network", "Atticus Zambrana", api);
 	}
 	
 	@Override

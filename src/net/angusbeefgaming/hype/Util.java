@@ -9,6 +9,10 @@ public class Util {
 		System.out.println(module + "> " + message);
 	}
 	
+	public static void debug(String message) {
+		System.out.println("Debug" + "> " + message);
+	}
+	
 	public static void pause(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);

@@ -12,7 +12,7 @@ import net.angusbeefgaming.hype.Util;
 
 public class ArcadeStats extends Plugin {
 	public ArcadeStats(HypixelAPI api) {
-		super("Arcade", api);
+		super("Arcade", "Atticus Zambrana", api);
 	}
 	
 	@Override

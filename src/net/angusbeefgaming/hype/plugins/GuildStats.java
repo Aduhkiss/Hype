@@ -14,7 +14,7 @@ import net.angusbeefgaming.hype.Util;
 public class GuildStats extends Plugin {
 
 	public GuildStats(HypixelAPI api) {
-		super("Guild", api);
+		super("Guild", "Atticus Zambrana", api);
 	}
 
 	@Override
@@ -42,9 +42,23 @@ public class GuildStats extends Plugin {
         System.out.println("Tag: " + (guild.isCanTag() ? guild.getTag() : "None"));
         System.out.println("Coins: " + guild.getCoins());
         System.out.println("Guild Members: ");
-        for (Member member : guild.getMembers()) {
+        
+        // Get the Guild Size
+        int size = 0;
+        for(Member member : guild.getMembers()) {
+        	size++;
+        }
+        
+        int tick = 0;
+        for(Member member : guild.getMembers()) {
+        	if(tick >= 60/* Max Cap for What we are showing */) {
+        		Util.print(getName(), "And " + size + " more...");
+        		return;
+        	}
             String names = MojangAPI.getName(UUID.fromString(MojangAPI.addDashes(member.getUuid())));
             System.out.println(String.format("%s (%s)", names, member.getRank()));
+            tick++;
+            size--;
         }
 	}
 

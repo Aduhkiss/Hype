@@ -12,7 +12,7 @@ import net.angusbeefgaming.hype.Util;
 
 public class BedwarsStats extends Plugin {
 	public BedwarsStats(HypixelAPI api) {
-		super("Bedwars", api);
+		super("Bedwars", "Atticus Zambrana",api);
 	}
 	
 	@Override

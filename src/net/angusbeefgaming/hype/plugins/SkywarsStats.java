@@ -12,7 +12,7 @@ import net.angusbeefgaming.hype.Util;
 public class SkywarsStats extends Plugin {
 	
 	public SkywarsStats(HypixelAPI api) {
-		super("Skywars", api);
+		super("Skywars", "Atticus Zambrana",api);
 	}
 	
 	@Override
