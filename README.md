@@ -20,7 +20,8 @@ On Minecraft Java, login to
 mc.hypixel.net
 ```
 
-Once connected, run the command ```
+Once connected, run the command 
+```
 /api
 ```
 
