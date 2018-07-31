@@ -10,7 +10,9 @@ public class Util {
 	}
 	
 	public static void debug(String message) {
-		System.out.println("Debug" + "> " + message);
+		if(Main.BETA) {
+			System.out.println("Debug" + "> " + message);
+		}
 	}
 	
 	public static void pause(int seconds) {
