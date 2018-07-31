@@ -6,7 +6,6 @@ import me.kbrewster.exceptions.APIException;
 import me.kbrewster.exceptions.InvalidPlayerException;
 import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.player.HypixelPlayer;
-import me.kbrewster.hypixelapi.player.stats.arcade.Arcade;
 import me.kbrewster.hypixelapi.player.stats.bedwars.Bedwars;
 import net.angusbeefgaming.hype.Plugin;
 import net.angusbeefgaming.hype.Util;
