@@ -8,12 +8,13 @@ import net.angusbeefgaming.hype.plugins.ArcadeStats;
 import net.angusbeefgaming.hype.plugins.BedwarsStats;
 import net.angusbeefgaming.hype.plugins.GuildStats;
 import net.angusbeefgaming.hype.plugins.NetworkStats;
+import net.angusbeefgaming.hype.plugins.SessionStats;
 import net.angusbeefgaming.hype.plugins.TNTGamesStats;
 
 public class Main {
 	
 	public static final String VERSION = "v1.2";
-	public static final boolean BETA = false;
+	public static final boolean BETA = true;
 	
 	public static List<Plugin> plugins = new ArrayList<Plugin>();
 	public static void main(String[] args) {
@@ -37,6 +38,7 @@ public class Main {
 		plugins.add(new NetworkStats(api));
 		plugins.add(new TNTGamesStats(api));
 		plugins.add(new GuildStats(api));
+		plugins.add(new SessionStats(api));
 		
 		start(api);
 	}
