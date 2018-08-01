@@ -15,7 +15,7 @@ import net.angusbeefgaming.hype.Util;
 public class BedwarsLeaderboards extends Plugin {
 	
 	public BedwarsLeaderboards(HypixelAPI api) {
-		super("BedwarsLeaderboards", "Atticus Zambrana");
+		super("BedwarsLB", "Atticus Zambrana");
 	}
 	
 	@Override
@@ -29,8 +29,11 @@ public class BedwarsLeaderboards extends Plugin {
 			Util.error("An Error has occured. Please Try Again Later.");
 		}
 		
+		Util.print(getName(), "Now Displaying All Bedwars Leaderboards");
+		
 		for(Leaderboard lboard : lb) {
-			System.out.println(String.format("%s (%s)", lboard.getTitle(), lboard.getPrefix()));
+			System.out.println("\n\n");
+			System.out.println(String.format("==== %s (%s) ====", lboard.getTitle(), lboard.getPrefix()));
             for (int i = 0; lboard.getLeaders().size() > i; i++) {
                 UUID uuid = UUID.fromString(lboard.getLeaders().get(i));
                 System.out.println(i + ") " + MojangAPI.getName(uuid));
