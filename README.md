@@ -33,4 +33,4 @@ If there is ANYTHING that you feel should be changed, or added, Do it! We love i
 
 ## Thanks
 
-Huge Thanks to (KevinPriv's Hypixel API Librarys)[https://github.com/KevinPriv/HypixelApi4J] Which is a core asset to Hype!
+Huge Thanks to [KevinPriv's Hypixel API Librarys](https://github.com/KevinPriv/HypixelApi4J) Which is a core asset to Hype!
