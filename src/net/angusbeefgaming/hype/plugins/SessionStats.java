@@ -40,8 +40,8 @@ public class SessionStats extends Plugin {
 		try {
 			s = api.getSession(name);
 		} catch (APIException | IOException e) {
-			System.out.println("There was an error grabbing Session Data for " + name + "!");
-			e.printStackTrace();
+			Util.print(getName(), "No Session was found for " + name + "! Are they online?");
+			return;
 		}
 		
 		System.out.println("Server: " + s.getServer());
