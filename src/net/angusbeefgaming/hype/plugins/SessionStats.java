@@ -45,10 +45,15 @@ public class SessionStats extends Plugin {
 		}
 		
 		System.out.println("Server: " + s.getServer());
-		System.out.println("Player List: ");
+		System.out.println("Player List: [WIP]");
+		/*
+		 * Still gotta figure this out
 		for(String str : s.getPlayers()) {
-			System.out.println(str);
+			// Talk with Mojang API Also by KevinPriv, to get username from UUID
+			String username = MojangAPI.getName(UUID.fromString(str));
+			System.out.println(username);
 		}
+		*/
 		
 		System.out.println("");
 	}
