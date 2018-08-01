@@ -13,7 +13,7 @@ import net.angusbeefgaming.hype.plugins.TNTGamesStats;
 public class Main {
 	
 	public static final String VERSION = "v1.2";
-	public static final boolean BETA = true;
+	public static final boolean BETA = false;
 	
 	public static List<Plugin> plugins = new ArrayList<Plugin>();
 	public static void main(String[] args) {

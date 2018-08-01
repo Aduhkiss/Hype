@@ -19,7 +19,8 @@ public abstract class Plugin {
 		this.name = name;
 		this.api = api;
 		this.author = author;
-		Util.print("Plugin Manager", "Registered " + name + " by " + author);
+		// Took this out because it causes Spam
+		//Util.print("Plugin Manager", "Registered " + name + " by " + author);
 	}
 	public String getName() {
 		return name;
