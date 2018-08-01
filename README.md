@@ -30,3 +30,7 @@ You should be given an API Key to use with Hype! I also recomend saving it somew
 ## Contributions
 
 If there is ANYTHING that you feel should be changed, or added, Do it! We love it when the community helps out!
+
+## Thanks
+
+Huge Thanks to (KevinPriv's Hypixel API Librarys)[https://github.com/KevinPriv/HypixelApi4J] Which is a core asset to Hype!
