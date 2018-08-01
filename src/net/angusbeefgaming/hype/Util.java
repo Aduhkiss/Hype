@@ -15,6 +15,10 @@ public class Util {
 		}
 	}
 	
+	public static void error(String message) {
+		System.out.println("Error> " + message);
+	}
+	
 	public static void pause(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);

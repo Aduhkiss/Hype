@@ -5,6 +5,7 @@ import java.util.List;
 
 import me.kbrewster.hypixelapi.HypixelAPI;
 import net.angusbeefgaming.hype.plugins.ArcadeStats;
+import net.angusbeefgaming.hype.plugins.BedwarsLeaderboards;
 import net.angusbeefgaming.hype.plugins.BedwarsStats;
 import net.angusbeefgaming.hype.plugins.GuildStats;
 import net.angusbeefgaming.hype.plugins.NetworkStats;
@@ -15,6 +16,8 @@ public class Main {
 	
 	public static final String VERSION = "v1.2";
 	public static final boolean BETA = true;
+	private static HypixelAPI api;
+	
 	
 	public static List<Plugin> plugins = new ArrayList<Plugin>();
 	public static void main(String[] args) {
@@ -29,16 +32,21 @@ public class Main {
 		String KEY = Util.getInput();
 		
 		Util.print("Hype", "Registering Hypixel API...");
-		HypixelAPI api = new HypixelAPI(KEY);
+		api = new HypixelAPI(KEY);
 		Util.print("Plugin Manager", "Registering Plugins...");
 		// Plugin Manager
 		
+		// Game Stats
 		plugins.add(new ArcadeStats(api));
 		plugins.add(new BedwarsStats(api));
 		plugins.add(new NetworkStats(api));
 		plugins.add(new TNTGamesStats(api));
 		plugins.add(new GuildStats(api));
 		plugins.add(new SessionStats(api));
+		
+		// Leaderboard Stats
+		
+		plugins.add(new BedwarsLeaderboards(api));
 		
 		start(api);
 	}
@@ -66,5 +74,9 @@ public class Main {
 			Util.print("Hype", "Unknown Command. Type HELP for Commands.");
 			start(api);
 		}
+	}
+	
+	public static HypixelAPI getApi() {
+		return api;
 	}
 }

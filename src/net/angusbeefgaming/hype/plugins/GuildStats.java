@@ -14,7 +14,7 @@ import net.angusbeefgaming.hype.Util;
 public class GuildStats extends Plugin {
 
 	public GuildStats(HypixelAPI api) {
-		super("Guild", "Atticus Zambrana", api);
+		super("Guild", "Atticus Zambrana");
 	}
 
 	@Override

@@ -12,7 +12,7 @@ import net.angusbeefgaming.hype.Util;
 
 public class SessionStats extends Plugin {
 	public SessionStats(HypixelAPI api) {
-		super("Session", "Atticus Zambrana", api);
+		super("Session", "Atticus Zambrana");
 	}
 	
 	@Override

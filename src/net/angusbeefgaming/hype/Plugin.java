@@ -15,9 +15,9 @@ public abstract class Plugin {
 	public String name;
 	public HypixelAPI api;
 	public String author;
-	public Plugin(String name, String author, HypixelAPI api) {
+	public Plugin(String name, String author) {
 		this.name = name;
-		this.api = api;
+		this.api = Main.getApi();
 		this.author = author;
 		// Took this out because it causes Spam
 		//Util.print("Plugin Manager", "Registered " + name + " by " + author);

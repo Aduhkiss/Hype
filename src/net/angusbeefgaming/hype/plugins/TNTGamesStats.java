@@ -12,7 +12,7 @@ import net.angusbeefgaming.hype.Util;
 
 public class TNTGamesStats extends Plugin {
 	public TNTGamesStats(HypixelAPI api) {
-		super("TNTGames", "Atticus Zambrana", api);
+		super("TNTGames", "Atticus Zambrana");
 	}
 
 	@Override
