@@ -14,8 +14,8 @@ import net.angusbeefgaming.hype.plugins.TNTGamesStats;
 
 public class Main {
 	
-	public static final String VERSION = "v1.2";
-	public static final boolean BETA = false;
+	public static final String VERSION = "v1.3";
+	public static final boolean BETA = true;
 	private static HypixelAPI api;
 	
 	
@@ -52,7 +52,7 @@ public class Main {
 	}
 	
 	public static void start(HypixelAPI api) {
-		Util.print("Hype", "Please State what you would like to search, and type HELP for all commands!");
+		Util.print("Hype", "Please State what you would like to search, and type 'help' for all commands!");
 		
 		String input = Util.getInput();
 		
@@ -71,7 +71,7 @@ public class Main {
 			start(api);
 		}
 		else {
-			Util.print("Hype", "Unknown Command. Type HELP for Commands.");
+			Util.print("Hype", "Unknown Command. Type 'help' for Commands.");
 			start(api);
 		}
 	}
