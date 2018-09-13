@@ -34,7 +34,7 @@ public class TNTGamesStats extends Plugin {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Util.print("Bedwars Stats", "Showing Bedwars Stats for " + name);
+		Util.print("TNT Games Stats", "Showing TNT Games Stats for " + name);
 		TNTGames tnt = player.getStats().getTNTGames();
 		
 		System.out.println("Coins: " + tnt.getCoins());
