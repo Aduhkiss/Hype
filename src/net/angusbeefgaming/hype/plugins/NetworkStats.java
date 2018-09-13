@@ -8,6 +8,7 @@ import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.player.HypixelPlayer;
 import net.angusbeefgaming.hype.Plugin;
 import net.angusbeefgaming.hype.Util;
+import net.angusbeefgaming.hype.obj.NetworkData;
 
 public class NetworkStats extends Plugin {
 	public NetworkStats(HypixelAPI api) {
@@ -35,10 +36,14 @@ public class NetworkStats extends Plugin {
 		}
 		Util.print("Network Stats", "Showing Network Stats for " + name);
 		
-		System.out.println("Network Level: " + player.getAbsoluteLevel());
-		System.out.println("Rank: " + player.getRank());
-		System.out.println("Karma: " + player.getKarma());
-		System.out.println("Package Rank: " + player.getPackageRank());
+		// Create a data object
+		
+		NetworkData data = new NetworkData(name, player.getAbsoluteLevel(), player.getRank(), player.getPackageRank(), player.getKarma());
+		
+		System.out.println("Network Level: " + data.getNetworkLevel());
+		System.out.println("Rank: " + data.getFullRank());
+		System.out.println("Karma: " + data.getKarma());
+		System.out.println("Package Rank: " + data.getPackageRank());
 		System.out.println("");
 	}
 }
