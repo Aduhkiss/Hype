@@ -36,6 +36,7 @@ public class BedwarsLeaderboards extends Plugin {
 			System.out.println(String.format("==== %s (%s) ====", lboard.getTitle(), lboard.getPrefix()));
             for (int i = 0; lboard.getLeaders().size() > i; i++) {
                 UUID uuid = UUID.fromString(lboard.getLeaders().get(i));
+                
                 System.out.println(i + ") " + MojangAPI.getName(uuid));
             }
 		}

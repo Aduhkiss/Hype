@@ -35,6 +35,9 @@ public class NetworkData {
 	}
 	public String getPackageRank() {
 		if(packageRank == null) {
+			if(fullRank == null) {
+				return "NON";
+			}
 			if(fullRank.equals("YOUTUBER")) {
 				return "WAS A NON BEFORE YOUTUBE RANK!";
 			}

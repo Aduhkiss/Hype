@@ -8,6 +8,7 @@ import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.player.HypixelPlayer;
 import net.angusbeefgaming.hype.Plugin;
 import net.angusbeefgaming.hype.Util;
+import net.angusbeefgaming.hype.manager.CacheManager;
 import net.angusbeefgaming.hype.obj.NetworkData;
 
 public class NetworkStats extends Plugin {
@@ -20,25 +21,33 @@ public class NetworkStats extends Plugin {
 		Util.print(getName(), "Who would you like to lookup?");
 		
 		String name = Util.getInput();
-
-		HypixelPlayer player = null;
-		try {
-			player = api.getPlayer(name);
-		} catch (APIException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidPlayerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		// Check if the player was found in the cache
+		NetworkData data = null;
+		
+		if(CacheManager.getCachedData(name) != null) {
+			data = CacheManager.getCachedData(name);
 		}
+		else {
+			HypixelPlayer player = null;
+			try {
+				player = api.getPlayer(name);
+			} catch (APIException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvalidPlayerException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			data = new NetworkData(name, player.getAbsoluteLevel(), player.getRank(), player.getPackageRank(), player.getKarma());
+			CacheManager.cachedNetworkData.add(data);
+		}
+
 		Util.print("Network Stats", "Showing Network Stats for " + name);
-		
-		// Create a data object
-		
-		NetworkData data = new NetworkData(name, player.getAbsoluteLevel(), player.getRank(), player.getPackageRank(), player.getKarma());
 		
 		System.out.println("Network Level: " + data.getNetworkLevel());
 		System.out.println("Rank: " + data.getFullRank());
