@@ -25,9 +25,24 @@ public class NetworkData {
 		return networkLevel;
 	}
 	public String getFullRank() {
+		if(fullRank == null) {
+			return "NONE FOUND!";
+		}
+		if(fullRank.equals("NORMAL")) {
+			return "NON";
+		}
 		return fullRank;
 	}
 	public String getPackageRank() {
+		if(packageRank == null) {
+			if(fullRank.equals("YOUTUBER")) {
+				return "WAS A NON BEFORE YOUTUBE RANK!";
+			}
+			return "NONE FOUND!";
+		}
+		if(packageRank.equals("NORMAL")) {
+			return "NON";
+		}
 		return packageRank;
 	}
 	public long getKarma() {
