@@ -15,6 +15,7 @@ public abstract class Plugin {
 	public String name;
 	public HypixelAPI api;
 	public String author;
+	
 	public Plugin(String name, String author) {
 		this.name = name;
 		this.api = Main.getApi();
