@@ -1,18 +1,25 @@
 package net.angusbeefgaming.hype.plugins;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import me.kbrewster.exceptions.APIException;
 import me.kbrewster.exceptions.InvalidPlayerException;
 import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.player.HypixelPlayer;
 import me.kbrewster.hypixelapi.session.Session;
+import me.kbrewster.mojangapi.MojangAPI;
 import net.angusbeefgaming.hype.Plugin;
 import net.angusbeefgaming.hype.Util;
 
 public class SessionStats extends Plugin {
 	public SessionStats(HypixelAPI api) {
 		super("Session", "Atticus Zambrana");
+	}
+	
+	@Override
+	public void startup() {
+		
 	}
 	
 	@Override
@@ -40,20 +47,22 @@ public class SessionStats extends Plugin {
 		try {
 			s = api.getSession(name);
 		} catch (APIException | IOException e) {
-			Util.print(getName(), "No Session was found for " + name + "! Are they online?");
+			Util.print(getName(), "No Session was found for " + name + "! In a game?");
 			return;
 		}
 		
 		System.out.println("Server: " + s.getServer());
-		System.out.println("Player List: [WIP]");
-		/*
-		 * Still gotta figure this out
+		
+		System.out.println("\n\n");
+		
+		System.out.println("Player List:");
+		
+		//Still gotta figure this out
 		for(String str : s.getPlayers()) {
-			// Talk with Mojang API Also by KevinPriv, to get username from UUID
-			String username = MojangAPI.getName(UUID.fromString(str));
+			String username = MojangAPI.getName(UUID.fromString(Util.getFullUUID(str)));
 			System.out.println(username);
 		}
-		*/
+		
 		
 		System.out.println("");
 	}

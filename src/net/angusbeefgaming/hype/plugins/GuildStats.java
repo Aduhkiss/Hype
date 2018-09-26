@@ -16,6 +16,11 @@ public class GuildStats extends Plugin {
 	public GuildStats(HypixelAPI api) {
 		super("Guild", "Atticus Zambrana");
 	}
+	
+	@Override
+	public void startup() {
+		
+	}
 
 	@Override
 	public void execute() {

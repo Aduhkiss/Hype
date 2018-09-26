@@ -10,6 +10,11 @@ public class ClearCacheData extends Plugin {
 	public ClearCacheData(HypixelAPI api) {
 		super("cleardata", "Atticus Zambrana");
 	}
+	
+	@Override
+	public void startup() {
+		
+	}
 
 	@Override
 	public void execute() {

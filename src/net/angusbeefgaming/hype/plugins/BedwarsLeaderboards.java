@@ -19,6 +19,11 @@ public class BedwarsLeaderboards extends Plugin {
 	}
 	
 	@Override
+	public void startup() {
+		
+	}
+	
+	@Override
 	public void execute() {
 		List<Leaderboard> lb = null;
 		try {

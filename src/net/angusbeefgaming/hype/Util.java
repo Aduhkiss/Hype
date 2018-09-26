@@ -30,4 +30,13 @@ public class Util {
 	public static String getInput() {
 		return sc.nextLine();
 	}
+	
+	public static String getFullUUID(String trimmedUuid) {
+		return java.util.UUID.fromString(
+			    trimmedUuid
+			    .replaceFirst( 
+			        "(\\p{XDigit}{8})(\\p{XDigit}{4})(\\p{XDigit}{4})(\\p{XDigit}{4})(\\p{XDigit}+)", "$1-$2-$3-$4-$5" 
+			    )
+			).toString();
+	}
 }

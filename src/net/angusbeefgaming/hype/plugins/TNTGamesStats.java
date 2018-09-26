@@ -14,6 +14,11 @@ public class TNTGamesStats extends Plugin {
 	public TNTGamesStats(HypixelAPI api) {
 		super("TNTGames", "Atticus Zambrana");
 	}
+	
+	@Override
+	public void startup() {
+		
+	}
 
 	@Override
 	public void execute() {
