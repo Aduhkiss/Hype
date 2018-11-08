@@ -34,13 +34,15 @@ public class SessionStats extends Plugin {
 		} catch (APIException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
-			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later.");
+			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later. (Error code: APIException)");
 		} catch (InvalidPlayerException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "Sorry, but I was unable to find data for that player! Maybe a typo? (Error code: InvalidPlayerException)");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "There was an error parsing that command (Error code: IOException)");
 		}
 		Util.print(getName(), "Showing Session Stats for " + name);
 		
