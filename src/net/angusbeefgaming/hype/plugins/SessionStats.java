@@ -33,7 +33,8 @@ public class SessionStats extends Plugin {
 			player = api.getPlayer(name);
 		} catch (APIException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later.");
 		} catch (InvalidPlayerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
