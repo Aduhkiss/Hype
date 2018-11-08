@@ -9,6 +9,10 @@ public class Util {
 		System.out.println(module + "> " + message);
 	}
 	
+	public static void print(String message) {
+		System.out.println("> " + message);
+	}
+	
 	public static void debug(String message) {
 		if(Main.BETA) {
 			System.out.println("Debug" + "> " + message);

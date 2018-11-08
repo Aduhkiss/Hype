@@ -9,6 +9,7 @@ import net.angusbeefgaming.hype.plugins.ArcadeStats;
 import net.angusbeefgaming.hype.plugins.BedwarsLeaderboards;
 import net.angusbeefgaming.hype.plugins.BedwarsStats;
 import net.angusbeefgaming.hype.plugins.GuildStats;
+import net.angusbeefgaming.hype.plugins.KeyInfo;
 import net.angusbeefgaming.hype.plugins.NetworkStats;
 import net.angusbeefgaming.hype.plugins.SessionStats;
 import net.angusbeefgaming.hype.plugins.TNTGamesStats;
@@ -49,6 +50,10 @@ public class Main {
 		
 		plugins.add(new BedwarsLeaderboards(api));
 		plugins.add(new ArcadeLB(api));
+		
+		// General Stats
+		
+		plugins.add(new KeyInfo(api));
 		
 		start(api);
 	}
