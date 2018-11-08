@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.kbrewster.hypixelapi.HypixelAPI;
+import net.angusbeefgaming.hype.plugins.ArcadeLB;
 import net.angusbeefgaming.hype.plugins.ArcadeStats;
 import net.angusbeefgaming.hype.plugins.BedwarsLeaderboards;
 import net.angusbeefgaming.hype.plugins.BedwarsStats;
@@ -47,6 +48,7 @@ public class Main {
 		// Leaderboard Stats
 		
 		plugins.add(new BedwarsLeaderboards(api));
+		plugins.add(new ArcadeLB(api));
 		
 		start(api);
 	}

@@ -30,6 +30,9 @@ public abstract class Plugin {
 	public String getAuthor() {
 		return author;
 	}
+	/**
+	 * Code to run when the user executes its command
+	 */
 	public abstract void execute();
 	
 	public abstract void startup();
