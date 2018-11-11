@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 import me.kbrewster.exceptions.APIException;
+import me.kbrewster.exceptions.InvalidPlayerException;
 import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.guild.Guild;
 import me.kbrewster.hypixelapi.guild.Member;
@@ -30,16 +31,34 @@ public class GuildStats extends Plugin {
         String guildID = null;
 		try {
 			guildID = api.getGuildID(name);
-		} catch (APIException | IOException e) {
+		} catch (APIException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} // Gets Guilds Identifier
+			//e.printStackTrace();
+			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later. (Error code: APIException)");
+		} catch (InvalidPlayerException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "Sorry, but I was unable to find data for that player! Maybe a typo? (Error code: InvalidPlayerException)");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "There was an error parsing that command (Error code: IOException)");
+		}
         Guild guild = null;
 		try {
 			guild = api.getGuild(guildID);
-		} catch (APIException | IOException e) {
+		} catch (APIException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later. (Error code: APIException)");
+		} catch (InvalidPlayerException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "Sorry, but I was unable to find data for that player! Maybe a typo? (Error code: InvalidPlayerException)");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "There was an error parsing that command (Error code: IOException)");
 		}
 		Util.print("Guild Stats", "Showing Guild Stats for " + name);
         System.out.println("Name: " + guild.getName());

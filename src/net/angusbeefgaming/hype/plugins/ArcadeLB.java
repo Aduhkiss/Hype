@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 import me.kbrewster.exceptions.APIException;
+import me.kbrewster.exceptions.InvalidPlayerException;
 import me.kbrewster.hypixelapi.HypixelAPI;
 import me.kbrewster.hypixelapi.leaderboards.Leaderboard;
 import me.kbrewster.hypixelapi.leaderboards.Leaderboards;
@@ -29,9 +30,17 @@ public class ArcadeLB extends Plugin {
 		try {
 			lb = api.getLeaderboard(Leaderboards.ARCADE);
 		} catch (APIException e) {
-			Util.error("The Hypixel API Returned an error. Please Try Again Later.");
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later. (Error code: APIException)");
+		} catch (InvalidPlayerException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "Sorry, but I was unable to find data for that player! Maybe a typo? (Error code: InvalidPlayerException)");
 		} catch (IOException e) {
-			Util.error("An Error has occured. Please Try Again Later.");
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			Util.print("Error", "There was an error parsing that command (Error code: IOException)");
 		}
 		
 		Util.print(getName(), "Now Displaying All Arcade Leaderboards");

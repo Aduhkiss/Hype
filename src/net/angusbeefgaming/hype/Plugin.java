@@ -21,7 +21,7 @@ public abstract class Plugin {
 		this.api = Main.getApi();
 		this.author = author;
 		// Took this out because it causes Spam
-		//Util.print("Plugin Manager", "Registered " + name + " by " + author);
+		Util.print("Plugin Manager", "Registered " + name + " by " + author);
 		startup();
 	}
 	public String getName() {

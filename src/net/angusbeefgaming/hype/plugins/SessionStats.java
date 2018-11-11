@@ -60,6 +60,8 @@ public class SessionStats extends Plugin {
 		
 		System.out.println("Player List:");
 		
+		
+		
 		//Still gotta figure this out
 		for(String str : s.getPlayers()) {
 			String username = MojangAPI.getName(UUID.fromString(Util.getFullUUID(str)));

@@ -17,7 +17,7 @@ import net.angusbeefgaming.hype.plugins.TNTGamesStats;
 public class Main {
 	
 	public static final String VERSION = "v1.3";
-	public static final boolean BETA = true;
+	public static final boolean BETA = false;
 	private static HypixelAPI api;
 	
 	

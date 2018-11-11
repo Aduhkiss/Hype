@@ -30,13 +30,16 @@ public class BedwarsStats extends Plugin {
 			player = api.getPlayer(name);
 		} catch (APIException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "There was an error accessing the Hypixel API! Please try again later. (Error code: APIException)");
 		} catch (InvalidPlayerException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "Sorry, but I was unable to find data for that player! Maybe a typo? (Error code: InvalidPlayerException)");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			Util.print("Error", "There was an error parsing that command (Error code: IOException)");
 		}
 		Util.print("Bedwars Stats", "Showing Bedwars Stats for " + name);
 		Bedwars bed = player.getStats().getBedwars();
